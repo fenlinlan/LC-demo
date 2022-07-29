@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>News</ion-title>
+    <ion-title>{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -12,7 +12,21 @@
       </ion-item>
     </ion-list>
     </div>
+
+    <ion-card *ngFor="let ne of a">
+      <ion-card-header>
+        <ion-card-subtitle>{{today | date}}</ion-card-subtitle>
+        <ion-card-title>{{ne.name}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content >
+{{ne.content}}<br>
+      </ion-card-content>
+    </ion-card>
 </ion-content>
+
+
+
 
 
   <!--
