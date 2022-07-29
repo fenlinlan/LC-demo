@@ -2,8 +2,10 @@
   <ion-toolbar>
     <ion-title>news-detial</ion-title>
   </ion-toolbar>
+  <ion-button (click)="goBack()">Back</ion-button>
 </ion-header>
 
-<ion-content>
-
+<ion-content *ngIf="newses" class="ion-padding">
+{{newses.content}}
 </ion-content>
+

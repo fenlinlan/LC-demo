@@ -10,8 +10,12 @@ export class NewsService {
   newsA : NEWS[] = news;
   constructor() { }
 
-  getNews():void {
-
+  getNews(id:number) : NEWS {
+for (let i=0;i<this.newsA.length;i++){
+  if (this.newsA[i].id === id){
+return this.newsA[i]
+  }
+}return null;
   }
   
 

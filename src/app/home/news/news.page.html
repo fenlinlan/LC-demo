@@ -4,32 +4,20 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div style="text-align:center ;">
-    <!-- List of Input Items -->
-    <ion-list>
-      <ion-item>
-        <ion-button>007</ion-button>
-      </ion-item>
-    </ion-list>
-    </div>
 
-    <ion-card *ngFor="let ne of a">
-      <ion-card-header>
-        <ion-card-subtitle>{{today | date}}</ion-card-subtitle>
-        <ion-card-title>{{ne.name}}</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content >
-{{ne.content}}<br>
-      </ion-card-content>
-    </ion-card>
+  <ion-card *ngFor="let ne of a" (click)="showDetail(ne)">
+    <ion-card-header>
+      <ion-card-subtitle>{{today | date}}</ion-card-subtitle>
+      <ion-card-title>{{ne.name}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 </ion-content>
 
 
 
 
 
-  <!--
+<!--
     <ion-item>
     <ion-label>Toggle</ion-label>
     <ion-toggle slot="end"></ion-toggle>
