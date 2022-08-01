@@ -21,7 +21,7 @@ today: number = Date.now();
 // today配合 | date可以單獨拿出日期 date:'fullDate' 會加上星期、 date:'h:mm a z'加上時間
 selectNews? : NEWS;
 a = news;
-
+onlineNews :NEWS[] = [];
 
 
 
@@ -34,10 +34,17 @@ onSelect(news:NEWS):void{
     private newServices : NewsService) { }
 
   ngOnInit() {
+    this.getNews();
   }
 
   showDetail(selectedNews : NEWS){
     this.navCtrl.navigateForward('home/news/news-detial/'+selectedNews.id);
   }
+
+
+  getNews() :void{
+    this.newServices.getonlineNews().subscribe(onlineNews => this.onlineNews = onlineNews);
+  }
+
 
 }
