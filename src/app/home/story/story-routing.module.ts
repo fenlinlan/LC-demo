@@ -7,7 +7,19 @@ const routes: Routes = [
   {
     path: '',
     component: StoryPage
+  },  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'traffic',
+    loadChildren: () => import('./traffic/traffic.module').then( m => m.TrafficPageModule)
+  },
+  {
+    path: 'gods',
+    loadChildren: () => import('./gods/gods.module').then( m => m.GodsPageModule)
   }
+
 ];
 
 @NgModule({

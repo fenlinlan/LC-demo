@@ -4,12 +4,17 @@
 <ion-toolbar class="ion-text-center">
   <ion-title> 歡迎使用樂成宮手機APP</ion-title>
 </ion-toolbar>
-<ion-img src="../../assets/image/mazu_q.png" id="mazu"></ion-img>
+
+
+  <ion-img src="../../assets/image/{{imgname}}.png" id="homegod" (click)="changeimage()"></ion-img>
+
+
 
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom"  color="dark">
     <ion-tab-button href="#">
-        <ion-icon name="briefcase-outline"></ion-icon>
+     <!-- <ion-img src="../../assets/icon/home.png"　width="30" height="30" ></ion-img> -->
+      <ion-icon name="briefcase-outline"></ion-icon>
         <ion-label>Home</ion-label>
     </ion-tab-button>
     <ion-tab-button tab="news">

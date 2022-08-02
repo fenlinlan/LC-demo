@@ -3,15 +3,20 @@
     <ion-title>{{title}}</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content  class="content">
 
-  <ion-card *ngFor="let ne of a" (click)="showDetail(ne)">
+  <ion-card *ngFor="let ne of a" (click)="showDetail(ne)" class="card">
+
     <ion-card-header>
       <ion-card-subtitle>{{today | date}}</ion-card-subtitle>
       <ion-card-title>{{ne.name}}</ion-card-title>
     </ion-card-header>
+    <img src="{{ne.photo}}" class="ion-padding"  class="photo">
   </ion-card>
 </ion-content>
+
+
+
 
 
 

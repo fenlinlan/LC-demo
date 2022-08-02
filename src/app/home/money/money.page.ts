@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-money',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoneyPage implements OnInit {
 
-  constructor() { }
+  constructor(private navCtrl :NavController) { }
 
   ngOnInit() {
   }
 
+
+  showDetail(){
+    this.navCtrl.navigateForward('home/money/draws');
+  }
+  
 }

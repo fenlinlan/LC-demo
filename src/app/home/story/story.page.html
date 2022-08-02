@@ -5,5 +5,9 @@
 </ion-header>
 
 <ion-content>
-
+<ion-list *ngFor="let i of storylist" (click)="showDetail(i)">
+  <ion-item>
+    <ion-label>{{i.name}}</ion-label>
+  </ion-item>
+</ion-list>
 </ion-content>
