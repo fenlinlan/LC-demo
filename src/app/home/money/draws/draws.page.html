@@ -15,12 +15,18 @@
     </ion-item>
   </ion-list>
   <ion-button (click)="draws()">抽籤</ion-button>
-  
-<ion-item>抽籤解果為 第 {{ans}} 號籤，請擲筊</ion-item>
+  <div  style="display:{{displaytype1}}">
+<ion-item>抽籤結果為 第 {{ans}} 號籤，請擲筊</ion-item>
 <ion-button (click)="draw2()">擲筊</ion-button>
-
+</div>
+<div  style="display:{{displaytype2}}">
 <ion-item>擲筊結果為   {{drawans}}</ion-item>
-
-
+</div>
+<div  style="display:{{displaytype3}}">
+  <ion-button (click)="open()">查看籤詩</ion-button>
+  </div>
+  <div  style="display:{{displaytype4}}">
+<ion-img src="../../../../assets/image/{{filename}}/{{imgname}}.png"></ion-img>
+    </div>
 
 </ion-content>
